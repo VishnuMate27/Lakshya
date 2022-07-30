@@ -27,6 +27,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  dropdown_button2: ^1.7.1
   flutter:
     sdk: flutter
 
@@ -58,14 +59,12 @@ dev_dependencies:
 
 
   # To add assets to your application, add an assets section, like this:
+
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/background1.png
-    - assets/images/download.png
-    - assets/images/Grass.png
-  #     - images/a_dot_ham.jpeg
-
+       - images/
+       - icons/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

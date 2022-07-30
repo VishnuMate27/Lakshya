@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lakshya/Mobile Screeen Pages/homeScreen.dart';
+import 'package:lakshya/Mobile Screeen Pages/loginScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,10 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(title: 'Flutter Demo', initialRoute: 'a', routes: {
-      'a': (context) => const HomeScreen(),
-      'b': (context) => const HomeScreen(),
-      'c': (context) => const HomeScreen(),
-      'd': (context) => const HomeScreen(),
+      'a': (context) => LoginPage(),
+      'b': (context) => HomeScreen(),
+      'c': (context) => HomeScreen(),
+      'd': (context) => HomeScreen(),
     });
   }
 }
