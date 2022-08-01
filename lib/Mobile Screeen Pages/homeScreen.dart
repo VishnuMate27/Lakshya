@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:lakshya/components/reusable_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -21,6 +22,28 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        // decoration: BoxDecoration(
+        //   gradient: LinearGradient(
+        //     colors: [
+        //       Color(0xFF57BEFA),
+        //       Color(0x72C4F3CA),
+        //       Color(0x8DCAEC94),
+        //       Color(0x36E5876C),
+        //       Color(0x62E1674C),
+        //       Color(0xD9D9D900),
+        //     ],
+        //     stops: [
+        //       0.1,
+        //       0.2986,
+        //       0.4242,
+        //       0.5809,
+        //       0.7935,
+        //       1.0,
+        //     ],
+        //     begin: Alignment.topLeft,
+        //     end: Alignment.bottomCenter,
+        //   ),
+        // ),
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage("images/background.png"),
@@ -39,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     'LAKSHYA',
                     style: TextStyle(
                       fontFamily: 'Roboto Slab',
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w600,
                       fontSize: 32.0,
                     ),
                   ),
@@ -101,11 +124,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   buttonWidth: 190,
                   buttonPadding: const EdgeInsets.only(left: 14, right: 14),
                   buttonDecoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(14),
+                    borderRadius: BorderRadius.circular(20),
                     border: Border.all(
                       color: Colors.black26,
                     ),
-                    color: Color(0xFFeec9f4),
+                    color: Color(0xFFFFCBCB),
                   ),
                 ),
               ),
