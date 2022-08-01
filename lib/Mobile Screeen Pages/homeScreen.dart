@@ -22,34 +22,34 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        // decoration: BoxDecoration(
-        //   gradient: LinearGradient(
-        //     colors: [
-        //       Color(0xFF57BEFA),
-        //       Color(0x72C4F3CA),
-        //       Color(0x8DCAEC94),
-        //       Color(0x36E5876C),
-        //       Color(0x62E1674C),
-        //       Color(0xD9D9D900),
-        //     ],
-        //     stops: [
-        //       0.1,
-        //       0.2986,
-        //       0.4242,
-        //       0.5809,
-        //       0.7935,
-        //       1.0,
-        //     ],
-        //     begin: Alignment.topLeft,
-        //     end: Alignment.bottomCenter,
-        //   ),
-        // ),
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("images/background.png"),
-            fit: BoxFit.cover,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color(0xFF57BEFA),
+              Color(0x72C4F3CA),
+              Color(0x8DCAEC94),
+              Color(0x36E5876C),
+              Color(0x62E1674C),
+              Color(0xD9D9D900),
+            ],
+            stops: [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomCenter,
           ),
         ),
+        // decoration: const BoxDecoration(
+        //   image: DecorationImage(
+        //     image: AssetImage("images/background.png"),
+        //     fit: BoxFit.cover,
+        //   ),
+        // ),
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(20.0),
           child: Column(
