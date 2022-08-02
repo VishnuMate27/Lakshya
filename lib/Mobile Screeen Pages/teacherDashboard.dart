@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:lakshya/components/circular_card.dart';
 
@@ -109,7 +110,6 @@ class TeacherDashboardScreen extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.only(top: 9.0),
-              alignment: Alignment.bottomCenter,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -136,485 +136,267 @@ class TeacherDashboardScreen extends StatelessWidget {
                   topRight: Radius.circular(60),
                 ),
               ),
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 16,
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(
-                          width: 97.0,
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 16,
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: 97.0,
+                      ),
+                      Image(
+                        width: 41.0,
+                        height: 36.0,
+                        image: AssetImage('icons/Student-img.png'),
+                      ),
+                      SizedBox(
+                        width: 1.0,
+                      ),
+                      Text(
+                        'Total Students: 69',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: 'Nunito Sans',
                         ),
-                        Image(
-                          width: 41.0,
-                          height: 36.0,
-                          image: AssetImage('icons/Student-img.png'),
+                      ),
+                      SizedBox(
+                        width: 19.0,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Text("Search");
+                        },
+                        child: Image(
+                          width: 20.0,
+                          height: 20.0,
+                          image: AssetImage('icons/Search.png'),
                         ),
-                        SizedBox(
-                          width: 1.0,
-                        ),
-                        Text(
-                          'Total Students: 69',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: 'Nunito Sans',
-                          ),
-                        ),
-                        SizedBox(
-                          width: 19.0,
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            Text("Search");
-                          },
-                          child: Image(
-                            width: 20.0,
-                            height: 20.0,
-                            image: AssetImage('icons/Search.png'),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 26.0,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xFFE9EEFC),
+                      borderRadius: BorderRadius.circular(20.0),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0x5E000000),
+                          blurRadius: 4.0,
+                          offset: Offset(
+                            15.0, // Move to right 10  horizontally
+                            15.0, // Move to bottom 10 Vertically
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(
-                      height: 26.0,
+                    width: 369,
+                    height: 90,
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          width: 34.0,
+                        ),
+                        Text(
+                          '1.',
+                          style: TextStyle(
+                            fontFamily: 'Nunito Sans',
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 29.0,
+                        ),
+                        Text(
+                          'Riya Thakur',
+                          style: TextStyle(
+                            fontFamily: 'Nunito Sans',
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 48.0,
+                        ),
+                        Text(
+                          '95%',
+                          style: TextStyle(
+                            fontFamily: 'Nunito Sans',
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 26.0,
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'View',
+                            style: TextStyle(
+                              fontFamily: 'Nunito Sans',
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xFFE9EEFC),
-                        borderRadius: BorderRadius.circular(20.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color(0x5E000000),
-                            blurRadius: 4.0,
-                            offset: Offset(
-                              15.0, // Move to right 10  horizontally
-                              15.0, // Move to bottom 10 Vertically
-                            ),
+                  ),
+                  SizedBox(
+                    height: 28.0,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xFFE9EEFC),
+                      borderRadius: BorderRadius.circular(20.0),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0x5E000000),
+                          blurRadius: 4.0,
+                          offset: Offset(
+                            15.0, // Move to right 10  horizontally
+                            15.0, // Move to bottom 10 Vertically
                           ),
-                        ],
-                      ),
-                      width: 369,
-                      height: 90,
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            width: 34.0,
-                          ),
-                          Text(
-                            '1.',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 29.0,
-                          ),
-                          Text(
-                            'Riya Thakur',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 48.0,
-                          ),
-                          Text(
-                            '95%',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 26.0,
-                          ),
-                          TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              'View',
-                              style: TextStyle(
-                                fontFamily: 'Nunito Sans',
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                    SizedBox(
-                      height: 28.0,
+                    width: 369,
+                    height: 90,
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          width: 34.0,
+                        ),
+                        Text(
+                          '1.',
+                          style: TextStyle(
+                            fontFamily: 'Nunito Sans',
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 29.0,
+                        ),
+                        Text(
+                          'Riya Thakur',
+                          style: TextStyle(
+                            fontFamily: 'Nunito Sans',
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 48.0,
+                        ),
+                        Text(
+                          '95%',
+                          style: TextStyle(
+                            fontFamily: 'Nunito Sans',
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 26.0,
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'View',
+                            style: TextStyle(
+                              fontFamily: 'Nunito Sans',
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xFFE9EEFC),
-                        borderRadius: BorderRadius.circular(20.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color(0x5E000000),
-                            blurRadius: 4.0,
-                            offset: Offset(
-                              15.0, // Move to right 10  horizontally
-                              15.0, // Move to bottom 10 Vertically
-                            ),
+                  ),
+                  SizedBox(
+                    height: 28.0,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Color(0xFFE9EEFC),
+                      borderRadius: BorderRadius.circular(20.0),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0x5E000000),
+                          blurRadius: 4.0,
+                          offset: Offset(
+                            15.0, // Move to right 10  horizontally
+                            15.0, // Move to bottom 10 Vertically
                           ),
-                        ],
-                      ),
-                      width: 369,
-                      height: 90,
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            width: 34.0,
-                          ),
-                          Text(
-                            '1.',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 29.0,
-                          ),
-                          Text(
-                            'Riya Thakur',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 48.0,
-                          ),
-                          Text(
-                            '95%',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 26.0,
-                          ),
-                          TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              'View',
-                              style: TextStyle(
-                                fontFamily: 'Nunito Sans',
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                    SizedBox(
-                      height: 28.0,
+                    width: 369,
+                    height: 90,
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          width: 34.0,
+                        ),
+                        Text(
+                          '1.',
+                          style: TextStyle(
+                            fontFamily: 'Nunito Sans',
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 29.0,
+                        ),
+                        Text(
+                          'Riya Thakur',
+                          style: TextStyle(
+                            fontFamily: 'Nunito Sans',
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 48.0,
+                        ),
+                        Text(
+                          '95%',
+                          style: TextStyle(
+                            fontFamily: 'Nunito Sans',
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 26.0,
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'View',
+                            style: TextStyle(
+                              fontFamily: 'Nunito Sans',
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xFFE9EEFC),
-                        borderRadius: BorderRadius.circular(20.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color(0x5E000000),
-                            blurRadius: 4.0,
-                            offset: Offset(
-                              15.0, // Move to right 10  horizontally
-                              15.0, // Move to bottom 10 Vertically
-                            ),
-                          ),
-                        ],
-                      ),
-                      width: 369,
-                      height: 90,
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            width: 34.0,
-                          ),
-                          Text(
-                            '1.',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 29.0,
-                          ),
-                          Text(
-                            'Riya Thakur',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 48.0,
-                          ),
-                          Text(
-                            '95%',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 26.0,
-                          ),
-                          TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              'View',
-                              style: TextStyle(
-                                fontFamily: 'Nunito Sans',
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 28.0,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xFFE9EEFC),
-                        borderRadius: BorderRadius.circular(20.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color(0x5E000000),
-                            blurRadius: 4.0,
-                            offset: Offset(
-                              15.0, // Move to right 10  horizontally
-                              15.0, // Move to bottom 10 Vertically
-                            ),
-                          ),
-                        ],
-                      ),
-                      width: 369,
-                      height: 90,
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            width: 34.0,
-                          ),
-                          Text(
-                            '1.',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 29.0,
-                          ),
-                          Text(
-                            'Riya Thakur',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 48.0,
-                          ),
-                          Text(
-                            '95%',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 26.0,
-                          ),
-                          TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              'View',
-                              style: TextStyle(
-                                fontFamily: 'Nunito Sans',
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 28.0,
-                    ),
-                    // Container(
-                    //   decoration: BoxDecoration(
-                    //     color: Color(0xFFE9EEFC),
-                    //     borderRadius: BorderRadius.circular(20.0),
-                    //     boxShadow: [
-                    //       BoxShadow(
-                    //         color: Color(0x5E000000),
-                    //         blurRadius: 4.0,
-                    //         offset: Offset(
-                    //           15.0, // Move to right 10  horizontally
-                    //           15.0, // Move to bottom 10 Vertically
-                    //         ),
-                    //       ),
-                    //     ],
-                    //   ),
-                    //   width: 369,
-                    //   height: 90,
-                    //   child: Row(
-                    //     children: [
-                    //       SizedBox(
-                    //         width: 34.0,
-                    //       ),
-                    //       Text(
-                    //         '1.',
-                    //         style: TextStyle(
-                    //           fontFamily: 'Nunito Sans',
-                    //           fontSize: 20,
-                    //           fontWeight: FontWeight.w600,
-                    //         ),
-                    //       ),
-                    //       SizedBox(
-                    //         width: 29.0,
-                    //       ),
-                    //       Text(
-                    //         'Riya Thakur',
-                    //         style: TextStyle(
-                    //           fontFamily: 'Nunito Sans',
-                    //           fontSize: 20,
-                    //           fontWeight: FontWeight.w600,
-                    //         ),
-                    //       ),
-                    //       SizedBox(
-                    //         width: 48.0,
-                    //       ),
-                    //       Text(
-                    //         '95%',
-                    //         style: TextStyle(
-                    //           fontFamily: 'Nunito Sans',
-                    //           fontSize: 20,
-                    //           fontWeight: FontWeight.w600,
-                    //         ),
-                    //       ),
-                    //       SizedBox(
-                    //         width: 26.0,
-                    //       ),
-                    //       TextButton(
-                    //         onPressed: () {},
-                    //         child: Text(
-                    //           'View',
-                    //           style: TextStyle(
-                    //             fontFamily: 'Nunito Sans',
-                    //             fontSize: 16,
-                    //             fontWeight: FontWeight.w600,
-                    //           ),
-                    //         ),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
-                    // SizedBox(
-                    //   height: 28.0,
-                    // ),
-                    // Container(
-                    //   decoration: BoxDecoration(
-                    //     color: Color(0xFFE9EEFC),
-                    //     borderRadius: BorderRadius.circular(20.0),
-                    //     boxShadow: [
-                    //       BoxShadow(
-                    //         color: Color(0x5E000000),
-                    //         blurRadius: 4.0,
-                    //         offset: Offset(
-                    //           15.0, // Move to right 10  horizontally
-                    //           15.0, // Move to bottom 10 Vertically
-                    //         ),
-                    //       ),
-                    //     ],
-                    //   ),
-                    //   width: 369,
-                    //   height: 90,
-                    //   child: Row(
-                    //     children: [
-                    //       SizedBox(
-                    //         width: 34.0,
-                    //       ),
-                    //       Text(
-                    //         '1.',
-                    //         style: TextStyle(
-                    //           fontFamily: 'Nunito Sans',
-                    //           fontSize: 20,
-                    //           fontWeight: FontWeight.w600,
-                    //         ),
-                    //       ),
-                    //       SizedBox(
-                    //         width: 29.0,
-                    //       ),
-                    //       Text(
-                    //         'Riya Thakur',
-                    //         style: TextStyle(
-                    //           fontFamily: 'Nunito Sans',
-                    //           fontSize: 20,
-                    //           fontWeight: FontWeight.w600,
-                    //         ),
-                    //       ),
-                    //       SizedBox(
-                    //         width: 48.0,
-                    //       ),
-                    //       Text(
-                    //         '95%',
-                    //         style: TextStyle(
-                    //           fontFamily: 'Nunito Sans',
-                    //           fontSize: 20,
-                    //           fontWeight: FontWeight.w600,
-                    //         ),
-                    //       ),
-                    //       SizedBox(
-                    //         width: 26.0,
-                    //       ),
-                    //       TextButton(
-                    //         onPressed: () {},
-                    //         child: Text(
-                    //           'View',
-                    //           style: TextStyle(
-                    //             fontFamily: 'Nunito Sans',
-                    //             fontSize: 16,
-                    //             fontWeight: FontWeight.w600,
-                    //           ),
-                    //         ),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
-                    // SizedBox(
-                    //   height: 28.0,
-                    // ),
-                  ],
-                ),
+                  ),
+                  SizedBox(
+                    height: 35.0,
+                  ),
+                ],
               ),
             ),
           ],
@@ -641,6 +423,19 @@ class TeacherDashboardScreen extends StatelessWidget {
       //     //Handle button tap
       //   },
       // ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Color(0xFFB4EADA),
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: FaIcon(FontAwesomeIcons.userCircle),
+            label: 'Business',
+          ),
+        ],
+      ),
     );
   }
 }
