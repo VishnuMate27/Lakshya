@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class RegisterScreen extends StatelessWidget {
-  const RegisterScreen({Key? key}) : super(key: key);
-
+  String dropdownValue = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
