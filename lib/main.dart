@@ -7,6 +7,7 @@ import 'package:lakshya/Mobile%20Screeen%20Pages/SelectSubjectScreen.dart';
 import 'package:lakshya/Mobile%20Screeen%20Pages/principalDashboardScreen.dart';
 import 'package:lakshya/Mobile%20Screeen%20Pages/registerScreen.dart';
 import 'package:lakshya/Mobile Screeen Pages/chooseStateScreen.dart';
+import 'package:lakshya/Mobile Screeen Pages/parentDashboardScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Lakshya', initialRoute: 'h', routes: {
+    return MaterialApp(title: 'Lakshya', initialRoute: 'c', routes: {
       'a': (context) => LoginPage(),
       'b': (context) => HomeScreen(),
       'c': (context) => TeacherDashboardScreen(),
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
       'f': (context) => ChooseStateScreen(),
       'g': (context) => SelectSubjectScreen(),
       'h': (context) => PrincipalDashboardScreen(),
+      'i': (context) => ParentDashboardScreen(),
     });
   }
 }

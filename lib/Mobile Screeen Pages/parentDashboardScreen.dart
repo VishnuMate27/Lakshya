@@ -1,12 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lakshya/components/rpsCustomPainter.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'dart:ui' as ui;
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
-import 'package:lakshya/components/rpsCustomPainter.dart';
 
-class PrincipalDashboardScreen extends StatelessWidget {
-  const PrincipalDashboardScreen({Key? key}) : super(key: key);
+class ParentDashboardScreen extends StatelessWidget {
+  const ParentDashboardScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +26,20 @@ class PrincipalDashboardScreen extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 314,
-          )
+            width: 30,
+          ),
+          GestureDetector(
+            onTap: () {
+              Text("Search");
+            },
+            child: Icon(
+              FontAwesomeIcons.search,
+              color: Color(0xff000000),
+            ),
+          ),
+          SizedBox(
+            width: 275,
+          ),
         ],
       ),
       // drawer: Drawer(
@@ -143,6 +154,53 @@ class PrincipalDashboardScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [
+            //     SizedBox(
+            //       width: 61,
+            //     ),
+            //     Column(
+            //       children: [
+            //         Padding(
+            //           padding: const EdgeInsets.only(
+            //             left: 220,
+            //             right: 25,
+            //           ), //left 326
+            //           child: CircleAvatar(
+            //             radius: 40,
+            //             backgroundColor: Colors.black,
+            //             child: CircleAvatar(
+            //               radius: 38,
+            //               backgroundColor: Color(0xFF58CDAA),
+            //               child: Container(
+            //                 width: 47 * 2,
+            //                 height: 45 * 2,
+            //                 decoration: BoxDecoration(
+            //                   image: DecorationImage(
+            //                     image: AssetImage('icons/image3.png'),
+            //                   ),
+            //                 ),
+            //               ),
+            //             ),
+            //           ),
+            //         ),
+            //         Padding(
+            //           padding:
+            //               const EdgeInsets.only(left: 200), //left should be 318
+            //           child: Text(
+            //             'Riya Thakur',
+            //             style: TextStyle(
+            //               fontFamily: 'Nunito Sans',
+            //               fontSize: 20,
+            //               fontWeight: FontWeight.w400,
+            //             ),
+            //           ),
+            //         )
+            //       ],
+            //     ),
+            //   ],
+            // ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -219,12 +277,23 @@ class PrincipalDashboardScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       Container(
-                        color: Color(0xFFF3F8EC),
+                        decoration: BoxDecoration(
+                          color: Color(0xFFE9EEFC),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 5,
+                              blurRadius: 7,
+                              offset:
+                                  Offset(5, 3), // changes position of shadow
+                            ),
+                          ],
+                        ),
                         width: 318,
                         height: 89,
                         child: Center(
                           child: Text(
-                            'Student Progress',
+                            'Score Sheet',
                             style: TextStyle(
                               fontFamily: 'Nunito Sans',
                               fontSize: 20,
@@ -298,6 +367,30 @@ class PrincipalDashboardScreen extends StatelessWidget {
                               fontSize: 20,
                               fontWeight: FontWeight.w400,
                               color: Color(0xFF1F65A5),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 25,
+                      ),
+                      ElevatedButton(
+                        onPressed: () {},
+                        child: Container(
+                          width: 100, //126
+                          height: 10, //35
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Back',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 15,
+                                fontFamily: 'Nunito Sans',
+                                color: Color(0xFF000000),
+                              ),
                             ),
                           ),
                         ),
