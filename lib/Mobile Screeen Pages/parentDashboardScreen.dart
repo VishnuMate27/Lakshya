@@ -37,9 +37,6 @@ class ParentDashboardScreen extends StatelessWidget {
               color: Color(0xff000000),
             ),
           ),
-          SizedBox(
-            width: 275,
-          ),
         ],
       ),
       // drawer: Drawer(
