@@ -11,6 +11,9 @@ import 'package:lakshya/Mobile Screeen Pages/parentDashboardScreen.dart';
 import 'package:lakshya/Mobile Screeen Pages/studentDashboardScreen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:lakshya/Mobile Screeen Pages/dailyPlanningScreen.dart';
+import 'package:lakshya/Mobile Screeen Pages/dailyPlanning2Screen.dart';
+import 'package:lakshya/Mobile Screeen Pages/countingPage.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,17 +36,20 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Lakshya', initialRoute: 'j', routes: {
-      'a': (context) => LoginPage(),
-      'b': (context) => HomeScreen(),
-      'c': (context) => TeacherDashboardScreen(),
-      'd': (context) => SignUpScreen(),
-      'e': (context) => RegisterScreen(),
-      'f': (context) => ChooseStateScreen(),
-      'g': (context) => SelectSubjectScreen(),
-      'h': (context) => PrincipalDashboardScreen(),
-      'i': (context) => ParentDashboardScreen(),
-      'j': (context) => StudentDashboardScreen(),
+    return MaterialApp(title: 'Lakshya', initialRoute: 'a', routes: {
+      'a': (context) => HomeScreen(),
+      'b': (context) => LoginPage(),
+      'c': (context) => SignUpScreen(),
+      'd': (context) => ChooseStateScreen(),
+      'e': (context) => SelectSubjectScreen(),
+      'f': (context) => StudentDashboardScreen(),
+      't': (context) => CountingPageScreen(),
+      'u': (context) => DailyPlanningScreen(),
+      'v': (context) => DailyPlanning2Screen(),
+      'w': (context) => RegisterScreen(),
+      'y': (context) => TeacherDashboardScreen(),
+      'x': (context) => PrincipalDashboardScreen(),
+      'z': (context) => ParentDashboardScreen(),
     });
   }
 }

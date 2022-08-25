@@ -91,7 +91,9 @@ class SignUpScreen extends StatelessWidget {
               ],
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, 'd');
+              },
               child: Container(
                 margin: EdgeInsets.only(top: 46, bottom: 34),
                 width: 368,

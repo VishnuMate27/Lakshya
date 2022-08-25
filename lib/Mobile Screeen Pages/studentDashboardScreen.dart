@@ -229,7 +229,7 @@ class StudentDashboardScreen extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              'Nursery',
+                              'Preschool 1',
                               style: TextStyle(
                                 fontFamily: 'Nunito Sans',
                                 fontSize: 20,
@@ -257,7 +257,7 @@ class StudentDashboardScreen extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              'Nursery',
+                              'Preschool 2',
                               style: TextStyle(
                                 fontFamily: 'Nunito Sans',
                                 fontSize: 20,
@@ -285,7 +285,7 @@ class StudentDashboardScreen extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              'Nursery',
+                              'Class 1',
                               style: TextStyle(
                                 fontFamily: 'Nunito Sans',
                                 fontSize: 20,
@@ -313,7 +313,7 @@ class StudentDashboardScreen extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              'Nursery',
+                              'Class 2',
                               style: TextStyle(
                                 fontFamily: 'Nunito Sans',
                                 fontSize: 20,
@@ -341,7 +341,7 @@ class StudentDashboardScreen extends StatelessWidget {
                           ),
                           child: Center(
                             child: Text(
-                              'Nursery',
+                              'Class 3',
                               style: TextStyle(
                                 fontFamily: 'Nunito Sans',
                                 fontSize: 20,
@@ -374,7 +374,7 @@ class StudentDashboardScreen extends StatelessWidget {
                         hint: Row(
                           children: const [
                             Text(
-                              'Subject',
+                              'Maths',
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w400,
@@ -423,50 +423,194 @@ class StudentDashboardScreen extends StatelessWidget {
                       SizedBox(
                         height: 41,
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Color(0xFFE9EEFC),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.5),
-                              spreadRadius: 5,
-                              blurRadius: 7,
-                              offset:
-                                  Offset(5, 3), // changes position of shadow
-                            ),
-                          ],
-                        ),
-                        width: 318,
-                        height: 89,
-                        child: Row(
-                          children: [
-                            Container(
-                              width: 125,
-                              height: 65,
-                              decoration: BoxDecoration(
-                                  // image: DecorationImage(
-                                  //   image: AssetImage('images/'),
-                                  //   fit: BoxFit.fill,
-                                  // ),
-                                  ),
-                            ),
-                            SizedBox(
-                              width: 23,
-                            ),
-                            Text(
-                              'Score Sheet',
-                              style: TextStyle(
-                                fontFamily: 'Nunito Sans',
-                                fontSize: 20,
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xFF1F65A5),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, 't');
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xFFE9EEFC),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 5,
+                                blurRadius: 7,
+                                offset:
+                                    Offset(5, 3), // changes position of shadow
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
+                          width: 318,
+                          height: 89,
+                          child: Row(
+                            children: [
+                              Container(
+                                width: 125,
+                                height: 65,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage('images/counting.png'),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 23,
+                              ),
+                              Text(
+                                'Counting',
+                                style: TextStyle(
+                                  fontFamily: 'Nunito Sans',
+                                  fontSize: 20,
+                                  decorationColor: Colors.black,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xFF000000),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 41,
+                      ),
+                      GestureDetector(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xFFE9EEFC),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 5,
+                                blurRadius: 7,
+                                offset:
+                                    Offset(5, 3), // changes position of shadow
+                              ),
+                            ],
+                          ),
+                          width: 318,
+                          height: 89,
+                          child: Row(
+                            children: [
+                              Container(
+                                width: 125,
+                                height: 65,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage('images/addition.png'),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 23,
+                              ),
+                              Text(
+                                'Addition',
+                                style: TextStyle(
+                                  fontFamily: 'Nunito Sans',
+                                  fontSize: 20,
+                                  decorationColor: Colors.black,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xFF000000),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 41,
+                      ),
+                      GestureDetector(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xFFE9EEFC),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 5,
+                                blurRadius: 7,
+                                offset:
+                                    Offset(5, 3), // changes position of shadow
+                              ),
+                            ],
+                          ),
+                          width: 318,
+                          height: 89,
+                          child: Row(
+                            children: [
+                              Container(
+                                width: 125,
+                                height: 65,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage('images/subtract.png'),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 23,
+                              ),
+                              Text(
+                                'Subtraction',
+                                style: TextStyle(
+                                  fontFamily: 'Nunito Sans',
+                                  fontSize: 20,
+                                  decorationColor: Colors.black,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xFF000000),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       SizedBox(
                         height: 25,
+                      ),
+                      GestureDetector(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Color(0xFFE9EEFC),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 5,
+                                blurRadius: 7,
+                                offset:
+                                    Offset(5, 3), // changes position of shadow
+                              ),
+                            ],
+                          ),
+                          width: 318,
+                          height: 89,
+                          child: Row(
+                            children: [
+                              Container(
+                                width: 125,
+                                height: 65,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image:
+                                        AssetImage('images/smallergreater.png'),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 23,
+                              ),
+                              Text(
+                                'Smaller-Greater',
+                                style: TextStyle(
+                                  fontFamily: 'Nunito Sans',
+                                  fontSize: 20,
+                                  decorationColor: Colors.black,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xFF000000),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                       // ElevatedButton(
                       //   onPressed: () {},

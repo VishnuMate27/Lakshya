@@ -63,7 +63,7 @@ class LoginPage extends StatelessWidget {
               // ),
               GestureDetector(
                 onTap: () {
-                  print('Button Pressed');
+                  Navigator.pushNamed(context, 'c');
                 },
                 child: Container(
                   width: 315,

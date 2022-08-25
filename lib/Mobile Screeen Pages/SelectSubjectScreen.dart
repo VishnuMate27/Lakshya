@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:lakshya/components/reusable_card.dart';
+import 'package:lakshya/Mobile Screeen Pages/chooseStateScreen.dart';
 
 class SelectSubjectScreen extends StatelessWidget {
   const SelectSubjectScreen({Key? key}) : super(key: key);
@@ -70,7 +71,7 @@ class SelectSubjectScreen extends StatelessWidget {
                     ),
                     child: Center(
                       child: Text(
-                        'Class1',
+                        'Maths',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w400,
@@ -147,194 +148,76 @@ class SelectSubjectScreen extends StatelessWidget {
                 //     ),
                 //   ),
                 // ),
-                Container(
-                  margin:
-                      EdgeInsets.only(left: 42, top: 41), //left should be 52
-                  width: 141,
-                  height: 154,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Color(0xFFF3F8EC),
-                    image: DecorationImage(
-                      // alignment: Alignment.topCenter,
-                      image: new AssetImage("icons/english.png"),
-                    ),
-                  ),
+                GestureDetector(
                   child: Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 5),
-                          child: Text(
-                            'English',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18,
+                    margin:
+                        EdgeInsets.only(left: 42, top: 41), //left should be 52
+                    width: 141,
+                    height: 154,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Color(0xFFF3F8EC),
+                      image: DecorationImage(
+                        // alignment: Alignment.topCenter,
+                        image: new AssetImage("icons/english.png"),
+                      ),
+                    ),
+                    child: Container(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 5),
+                            child: Text(
+                              'English',
+                              style: TextStyle(
+                                fontFamily: 'Nunito Sans',
+                                fontWeight: FontWeight.w600,
+                                fontSize: 18,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
-                Container(
-                  margin:
-                      EdgeInsets.only(left: 42, top: 41), //left should be 52
-                  width: 141,
-                  height: 154,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Color(0xFFF3F8EC),
-                    image: DecorationImage(
-                      // alignment: Alignment.topCenter,
-                      image: new AssetImage("icons/english.png"),
-                    ),
-                  ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, 't');
+                  },
                   child: Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 5),
-                          child: Text(
-                            'English',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18,
+                    margin:
+                        EdgeInsets.only(left: 42, top: 41), //left should be 52
+                    width: 141,
+                    height: 154,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Color(0xFFF3F8EC),
+                      image: DecorationImage(
+                        // alignment: Alignment.topCenter,
+                        image: new AssetImage("images/maths1.png"),
+                      ),
+                    ),
+                    child: Container(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 5),
+                            child: Text(
+                              'Maths',
+                              style: TextStyle(
+                                fontFamily: 'Nunito Sans',
+                                fontWeight: FontWeight.w600,
+                                fontSize: 18,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                // ReusableCard(
-                //   colour: Color(0xFFeec9f4),
-                //   onPressed: () {
-                //     Text("Pressed");
-                //   },
-                //   cardChild: Container(
-                //     height: 211.0,
-                //     width: 148.0,
-                //     decoration: const BoxDecoration(
-                //       image: DecorationImage(
-                //         image: AssetImage('images/student.png'),
-                //       ),
-                //     ),
-                //     child: Container(
-                //       padding: const EdgeInsets.only(bottom: 14.0),
-                //       child: const Text(
-                //         "Student",
-                //         style: TextStyle(
-                //           color: Colors.black,
-                //           fontWeight: FontWeight.w400,
-                //           fontSize: 20.0,
-                //           fontFamily: 'Rufina',
-                //         ),
-                //       ),
-                //       alignment: Alignment.bottomCenter,
-                //     ),
-                //   ),
-                // ),
-                // ReusableCard(
-                //   colour: Color(0xFFeec9f4),
-                //   onPressed: () {
-                //     Text("Pressed");
-                //   },
-                //   cardChild: Container(
-                //     height: 211.0,
-                //     width: 148.0,
-                //     decoration: const BoxDecoration(
-                //       image: DecorationImage(
-                //         image: AssetImage('images/student.png'),
-                //       ),
-                //     ),
-                //     child: Container(
-                //       padding: const EdgeInsets.only(bottom: 14.0),
-                //       child: const Text(
-                //         "Student",
-                //         style: TextStyle(
-                //             color: Colors.black,
-                //             fontWeight: FontWeight.w400,
-                //             fontSize: 20.0,
-                //             fontFamily: 'Rufina'),
-                //       ),
-                //       alignment: Alignment.bottomCenter,
-                //     ),
-                //   ),
-                // ),
-                Container(
-                  margin:
-                      EdgeInsets.only(left: 42, top: 41), //left should be 52
-                  width: 141,
-                  height: 154,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Color(0xFFF3F8EC),
-                    image: DecorationImage(
-                      // alignment: Alignment.topCenter,
-                      image: new AssetImage("icons/english.png"),
-                    ),
-                  ),
-                  child: Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 5),
-                          child: Text(
-                            'English',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Container(
-                  margin:
-                      EdgeInsets.only(left: 42, top: 41), //left should be 52
-                  width: 141,
-                  height: 154,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Color(0xFFF3F8EC),
-                    image: DecorationImage(
-                      // alignment: Alignment.topCenter,
-                      image: new AssetImage("icons/english.png"),
-                    ),
-                  ),
-                  child: Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 5),
-                          child: Text(
-                            'English',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18,
-                            ),
-                          ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -407,7 +290,7 @@ class SelectSubjectScreen extends StatelessWidget {
                     color: Color(0xFFF3F8EC),
                     image: DecorationImage(
                       // alignment: Alignment.topCenter,
-                      image: new AssetImage("icons/english.png"),
+                      image: new AssetImage("images/Hindi.png"),
                     ),
                   ),
                   child: Container(
@@ -418,7 +301,137 @@ class SelectSubjectScreen extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(bottom: 5),
                           child: Text(
-                            'English',
+                            'Hindi',
+                            style: TextStyle(
+                              fontFamily: 'Nunito Sans',
+                              fontWeight: FontWeight.w600,
+                              fontSize: 18,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, 'f');
+                  },
+                  child: Container(
+                    margin:
+                        EdgeInsets.only(left: 42, top: 41), //left should be 52
+                    width: 141,
+                    height: 154,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: Color(0xFFF3F8EC),
+                      image: DecorationImage(
+                        // alignment: Alignment.topCenter,
+                        image: new AssetImage("images/Evs.png"),
+                      ),
+                    ),
+                    child: Container(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 5),
+                            child: Text(
+                              'EVS',
+                              style: TextStyle(
+                                fontFamily: 'Nunito Sans',
+                                fontWeight: FontWeight.w600,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                // ReusableCard(
+                //   colour: Color(0xFFeec9f4),
+                //   onPressed: () {
+                //     Text("Pressed");
+                //   },
+                //   cardChild: Container(
+                //     height: 211.0,
+                //     width: 148.0,
+                //     decoration: const BoxDecoration(
+                //       image: DecorationImage(
+                //         image: AssetImage('images/student.png'),
+                //       ),
+                //     ),
+                //     child: Container(
+                //       padding: const EdgeInsets.only(bottom: 14.0),
+                //       child: const Text(
+                //         "Student",
+                //         style: TextStyle(
+                //           color: Colors.black,
+                //           fontWeight: FontWeight.w400,
+                //           fontSize: 20.0,
+                //           fontFamily: 'Rufina',
+                //         ),
+                //       ),
+                //       alignment: Alignment.bottomCenter,
+                //     ),
+                //   ),
+                // ),
+                // ReusableCard(
+                //   colour: Color(0xFFeec9f4),
+                //   onPressed: () {
+                //     Text("Pressed");
+                //   },
+                //   cardChild: Container(
+                //     height: 211.0,
+                //     width: 148.0,
+                //     decoration: const BoxDecoration(
+                //       image: DecorationImage(
+                //         image: AssetImage('images/student.png'),
+                //       ),
+                //     ),
+                //     child: Container(
+                //       padding: const EdgeInsets.only(bottom: 14.0),
+                //       child: const Text(
+                //         "Student",
+                //         style: TextStyle(
+                //             color: Colors.black,
+                //             fontWeight: FontWeight.w400,
+                //             fontSize: 20.0,
+                //             fontFamily: 'Rufina'),
+                //       ),
+                //       alignment: Alignment.bottomCenter,
+                //     ),
+                //   ),
+                // ),
+                Container(
+                  margin:
+                      EdgeInsets.only(left: 42, top: 41), //left should be 52
+                  width: 141,
+                  height: 154,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: Color(0xFFF3F8EC),
+                    image: DecorationImage(
+                      // alignment: Alignment.topCenter,
+                      image: new AssetImage("images/Gk.png"),
+                    ),
+                  ),
+                  child: Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 5),
+                          child: Text(
+                            'GK',
                             style: TextStyle(
                               fontFamily: 'Nunito Sans',
                               fontWeight: FontWeight.w600,
@@ -440,7 +453,7 @@ class SelectSubjectScreen extends StatelessWidget {
                     color: Color(0xFFF3F8EC),
                     image: DecorationImage(
                       // alignment: Alignment.topCenter,
-                      image: new AssetImage("icons/english.png"),
+                      image: new AssetImage("images/drawing.png"),
                     ),
                   ),
                   child: Container(
@@ -451,7 +464,7 @@ class SelectSubjectScreen extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(bottom: 5),
                           child: Text(
-                            'English',
+                            'Drawing',
                             style: TextStyle(
                               fontFamily: 'Nunito Sans',
                               fontWeight: FontWeight.w600,

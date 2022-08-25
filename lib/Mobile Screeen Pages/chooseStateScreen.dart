@@ -10,18 +10,33 @@ class ChooseStateScreen extends StatefulWidget {
 }
 
 class _ChooseStateScreenState extends State<ChooseStateScreen> {
-  final List<String> items = [
-    'A_Item1',
-    'A_Item2',
-    'A_Item3',
-    'A_Item4',
-    'B_Item1',
-    'B_Item2',
-    'B_Item3',
-    'B_Item4',
+  final List<String> items_board = [
+    'CENTRAL BOARD OF SECONDARY EDUCATION, NEW DELHI',
+    'NATIONAL INSTITUTE OF OPEN SCHOOLING, NEW DELHI',
+    'MAHARASHTRA STATE BOARD OF SECONDARY AND HIGHER SECONDARY EDUCATION, MAHARASHTRA',
+    'BOARD OF SECONDARY EDUCATION, MADHYA PRADESH',
+    'BOARD OF SECONDARY EDUCATION, MANIPUR',
+    'PUNJAB SCHOOL EDUCATION BOARD, PUNJAB',
+    'BOARD OF SECONDARY EDUCATION, TELANGANA STATE',
+    'BOARD OF SCHOOL EDUCATION, UTTARAKHAND',
+  ];
+  final List<String> items_medium = [
+    'English',
+    'Hindi',
+    'Marathi',
+  ];
+  final List<String> items_class = [
+    'Nursery',
+    'Preschool 1',
+    'Preschool 2',
+    'Class 1',
+    'Class 2',
+    'Class 3',
   ];
 
-  String? selectedValue;
+  String? selectedValue_board;
+  String? selectedValue_medium;
+  String? selectedValue_class;
   final TextEditingController textEditingController = TextEditingController();
 
   @override
@@ -89,21 +104,21 @@ class _ChooseStateScreenState extends State<ChooseStateScreen> {
                       color: Color(0xFFFFFFFF),
                     ),
                   ),
-                  items: items
+                  items: items_board
                       .map((item) => DropdownMenuItem<String>(
                             value: item,
                             child: Text(
                               item,
                               style: const TextStyle(
-                                fontSize: 25,
+                                fontSize: 18,
                               ),
                             ),
                           ))
                       .toList(),
-                  value: selectedValue,
+                  value: selectedValue_board,
                   onChanged: (value) {
                     setState(() {
-                      selectedValue = value as String;
+                      selectedValue_board = value as String;
                     });
                   },
                   buttonHeight: 60,
@@ -167,7 +182,7 @@ class _ChooseStateScreenState extends State<ChooseStateScreen> {
                       color: Color(0xFFFFFFFF),
                     ),
                   ),
-                  items: items
+                  items: items_medium
                       .map((item) => DropdownMenuItem<String>(
                             value: item,
                             child: Text(
@@ -178,10 +193,10 @@ class _ChooseStateScreenState extends State<ChooseStateScreen> {
                             ),
                           ))
                       .toList(),
-                  value: selectedValue,
+                  value: selectedValue_medium,
                   onChanged: (value) {
                     setState(() {
-                      selectedValue = value as String;
+                      selectedValue_medium = value as String;
                     });
                   },
                   buttonHeight: 60,
@@ -245,7 +260,7 @@ class _ChooseStateScreenState extends State<ChooseStateScreen> {
                       color: Color(0xFFFFFFFF),
                     ),
                   ),
-                  items: items
+                  items: items_class
                       .map((item) => DropdownMenuItem<String>(
                             value: item,
                             child: Text(
@@ -256,10 +271,10 @@ class _ChooseStateScreenState extends State<ChooseStateScreen> {
                             ),
                           ))
                       .toList(),
-                  value: selectedValue,
+                  value: selectedValue_class,
                   onChanged: (value) {
                     setState(() {
-                      selectedValue = value as String;
+                      selectedValue_class = value as String;
                     });
                   },
                   buttonHeight: 60,
@@ -306,7 +321,9 @@ class _ChooseStateScreenState extends State<ChooseStateScreen> {
               height: 150,
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, 'e');
+              },
               child: Container(
                 margin: EdgeInsets.only(top: 46, bottom: 34),
                 width: 368,
