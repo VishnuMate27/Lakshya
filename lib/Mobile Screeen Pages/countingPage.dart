@@ -146,9 +146,7 @@ class _CountingPageScreenState extends State<CountingPageScreen> {
                       height: 25,
                     ),
                     GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, 'z');
-                      },
+                      onTap: () {},
                       child: Container(
                         width: 318,
                         height: 74,
@@ -170,9 +168,7 @@ class _CountingPageScreenState extends State<CountingPageScreen> {
                       height: 25,
                     ),
                     GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, 'z');
-                      },
+                      onTap: () {},
                       child: Container(
                         width: 318,
                         height: 74,

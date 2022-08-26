@@ -185,7 +185,7 @@ class SelectSubjectScreen extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, 't');
+                    Navigator.pushNamed(context, 'f');
                   },
                   child: Container(
                     margin:

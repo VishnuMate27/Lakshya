@@ -301,7 +301,24 @@ class ParentDashboardScreen extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        color: Color(0xFFF3F8EC),
+                        color: Color(0xFFE9EEFC),
+                        width: 318,
+                        height: 89,
+                        margin: EdgeInsets.only(top: 25), //should be 35
+                        child: Center(
+                          child: Text(
+                            'Attendence',
+                            style: TextStyle(
+                              fontFamily: 'Nunito Sans',
+                              fontSize: 20,
+                              fontWeight: FontWeight.w400,
+                              color: Color(0xFF1F65A5),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        color: Color(0xFFE9EEFC),
                         width: 318,
                         height: 89,
                         margin: EdgeInsets.only(top: 25), //should be 35
@@ -318,47 +335,13 @@ class ParentDashboardScreen extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        color: Color(0xFFF3F8EC),
+                        color: Color(0xFFE9EEFC),
                         width: 318,
                         height: 89,
                         margin: EdgeInsets.only(top: 25), //should be 35
                         child: Center(
                           child: Text(
-                            'Student Progress',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontSize: 20,
-                              fontWeight: FontWeight.w400,
-                              color: Color(0xFF1F65A5),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        color: Color(0xFFF3F8EC),
-                        width: 318,
-                        height: 89,
-                        margin: EdgeInsets.only(top: 25), //should be 35
-                        child: Center(
-                          child: Text(
-                            'Student Progress',
-                            style: TextStyle(
-                              fontFamily: 'Nunito Sans',
-                              fontSize: 20,
-                              fontWeight: FontWeight.w400,
-                              color: Color(0xFF1F65A5),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        color: Color(0xFFF3F8EC),
-                        width: 318,
-                        height: 89,
-                        margin: EdgeInsets.only(top: 25), //should be 35
-                        child: Center(
-                          child: Text(
-                            'Student Progress',
+                            'Performance in Games',
                             style: TextStyle(
                               fontFamily: 'Nunito Sans',
                               fontSize: 20,

@@ -14,6 +14,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:lakshya/Mobile Screeen Pages/dailyPlanningScreen.dart';
 import 'package:lakshya/Mobile Screeen Pages/dailyPlanning2Screen.dart';
 import 'package:lakshya/Mobile Screeen Pages/countingPage.dart';
+import 'package:lakshya/Mobile Screeen Pages/giveAssessmentScreen.dart';
+//import 'package:firebase_auth/firebase_auth.dart';
+import 'package:lakshya/Mobile%20Screeen%20Pages/studentProgressScreen.dart';
 
 import 'dart:async';
 import 'package:url_launcher/link.dart';
@@ -40,13 +43,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Lakshya', initialRoute: 'a', routes: {
+    return MaterialApp(title: 'Lakshya', initialRoute: 'r', routes: {
       'a': (context) => HomeScreen(),
       'b': (context) => LoginPage(),
       'c': (context) => SignUpScreen(),
       'd': (context) => ChooseStateScreen(),
       'e': (context) => SelectSubjectScreen(),
       'f': (context) => StudentDashboardScreen(),
+      'r': (context) => StudentProgressScreen(),
+      's': (context) => GiveAssessmentScreen(),
       't': (context) => CountingPageScreen(),
       'u': (context) => DailyPlanningScreen(),
       'v': (context) => DailyPlanning2Screen(),
@@ -58,16 +63,15 @@ class MyApp extends StatelessWidget {
   }
 }
 
-Future openBrowserURL({
-  required String url,
-  bool inApp = false,
-}) async {
-  if (await canLaunch(url)) {
-    await launch(
-      url,
-      forceWebView: inApp,
-      forceSafariVC: inApp,
-      enableJavaScript: true,
-    );
-  }
-}
+// Widget _handleWindowDisplay() {
+//   return StreamBuilder(
+//     stream: FirebaseAuth.instance.onAuthStateChanged,
+//     builder: (BuildContext context, snapshot) {
+//       if (snapshot.connectionState == ConnectionState.waiting) {
+//         return Center(
+//           child: Text('Loading'),
+//         );
+//       }
+//     },
+//   );
+// }

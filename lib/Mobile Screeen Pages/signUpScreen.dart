@@ -1,10 +1,16 @@
+// import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+class SignUpScreen extends StatefulWidget {
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+  @override
+  State<SignUpScreen> createState() => _SignUpScreenState();
+}
 
+class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,6 +55,7 @@ class SignUpScreen extends StatelessWidget {
             Container(
               margin: EdgeInsets.fromLTRB(29, 90, 29, 0),
               child: TextFormField(
+                //controller: emailController,
                 decoration: InputDecoration(
                   hintText: 'Email Address or Username',
                   hintStyle: TextStyle(
@@ -62,6 +69,7 @@ class SignUpScreen extends StatelessWidget {
             Container(
               margin: EdgeInsets.fromLTRB(29, 40, 29, 30), //top should be 90
               child: TextFormField(
+                //controller: passwordController,
                 obscureText: true,
                 decoration: InputDecoration(
                   hintText: 'Password',
@@ -92,6 +100,7 @@ class SignUpScreen extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
+                //signIn,
                 Navigator.pushNamed(context, 'd');
               },
               child: Container(
@@ -165,3 +174,7 @@ class SignUpScreen extends StatelessWidget {
     );
   }
 }
+
+//Future signIn() async {
+//  await FirebaseAuth.instance.signInWithEmailAndPassword(email: emailController.text.trim, password: passwordController.text.trim),
+//}
