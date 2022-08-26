@@ -453,7 +453,7 @@ class SelectSubjectScreen extends StatelessWidget {
                     color: Color(0xFFF3F8EC),
                     image: DecorationImage(
                       // alignment: Alignment.topCenter,
-                      image: new AssetImage("images/drawing.png"),
+                      image: new AssetImage("images/Drawing.png"),
                     ),
                   ),
                   child: Container(

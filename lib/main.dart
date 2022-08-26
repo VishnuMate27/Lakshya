@@ -15,6 +15,10 @@ import 'package:lakshya/Mobile Screeen Pages/dailyPlanningScreen.dart';
 import 'package:lakshya/Mobile Screeen Pages/dailyPlanning2Screen.dart';
 import 'package:lakshya/Mobile Screeen Pages/countingPage.dart';
 
+import 'dart:async';
+import 'package:url_launcher/link.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -51,5 +55,19 @@ class MyApp extends StatelessWidget {
       'x': (context) => PrincipalDashboardScreen(),
       'z': (context) => ParentDashboardScreen(),
     });
+  }
+}
+
+Future openBrowserURL({
+  required String url,
+  bool inApp = false,
+}) async {
+  if (await canLaunch(url)) {
+    await launch(
+      url,
+      forceWebView: inApp,
+      forceSafariVC: inApp,
+      enableJavaScript: true,
+    );
   }
 }

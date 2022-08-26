@@ -1,12 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:lakshya/components/rpsCustomPainter.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'dart:async';
 
-class CountingPageScreen extends StatelessWidget {
-  const CountingPageScreen({Key? key}) : super(key: key);
+import 'package:flutter/material.dart';
+import 'package:url_launcher/link.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+class CountingPageScreen extends StatefulWidget {
+  // const CountingPageScreen({Key? key}) : super(key: key);
 
   @override
+  State<CountingPageScreen> createState() => _CountingPageScreenState();
+}
+
+class _CountingPageScreenState extends State<CountingPageScreen> {
+  Future<void> _launchInBrowser(Uri url) async {
+    if (!await launchUrl(
+      url,
+      mode: LaunchMode.externalApplication,
+    )) {
+      throw 'Could not launch $url';
+    }
+  }
+
+  Future<void>? _launched;
+  @override
   Widget build(BuildContext context) {
+    final Uri toLaunch =
+        Uri(scheme: 'https', host: 'www.diksha.gov.in', path: 'headers/');
     return Scaffold(
       backgroundColor: Color(0xFFAEEFDC),
       appBar: AppBar(
@@ -100,9 +122,9 @@ class CountingPageScreen extends StatelessWidget {
                       height: 25,
                     ),
                     GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, 'z');
-                      },
+                      onTap: () => setState(() {
+                        _launched = _launchInBrowser(toLaunch);
+                      }),
                       child: Container(
                         width: 318,
                         height: 74,
