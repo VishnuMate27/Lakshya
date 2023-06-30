@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class RegisterScreen extends StatelessWidget {
-  const RegisterScreen({Key? key}) : super(key: key);
-
+  String dropdownValue = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -122,7 +121,7 @@ class RegisterScreen extends StatelessWidget {
               child: TextFormField(
                 decoration: InputDecoration(
                   suffixIcon: Icon(
-                    FontAwesomeIcons.arrowDown,
+                    Icons.keyboard_arrow_down,
                     color: Color(0xFF000000),
                   ),
                   hintText: 'Role',
@@ -138,6 +137,10 @@ class RegisterScreen extends StatelessWidget {
               margin: EdgeInsets.only(left: 29, right: 29, top: 56),
               child: TextFormField(
                 decoration: InputDecoration(
+                  suffixIcon: Icon(
+                    Icons.keyboard_arrow_down,
+                    color: Color(0xFF000000),
+                  ),
                   hintText: 'State',
                   hintStyle: TextStyle(
                     backgroundColor: Colors.transparent,
@@ -151,6 +154,10 @@ class RegisterScreen extends StatelessWidget {
               margin: EdgeInsets.only(left: 29, right: 29, top: 56),
               child: TextFormField(
                 decoration: InputDecoration(
+                  suffixIcon: Icon(
+                    Icons.keyboard_arrow_down,
+                    color: Color(0xFF000000),
+                  ),
                   hintText: 'District',
                   hintStyle: TextStyle(
                     backgroundColor: Colors.transparent,

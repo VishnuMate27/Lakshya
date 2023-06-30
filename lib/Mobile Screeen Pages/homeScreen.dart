@@ -22,26 +22,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color(0xFF57BEFA),
-              Color(0x72C4F3CA),
-              Color(0x8DCAEC94),
-              Color(0x36E5876C),
-              Color(0x62E1674C),
-              Color(0xD9D9D900),
-            ],
-            stops: [
-              1.0,
-              1.0,
-              1.0,
-              1.0,
-              1.0,
-              1.0,
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomCenter,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("images/background.png"),
+            fit: BoxFit.fill,
           ),
         ),
         // decoration: const BoxDecoration(
@@ -140,14 +124,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   ReusableCard(
                     colour: Color(0xFFeec9f4),
                     onPressed: () {
-                      Text("Pressed");
+                      Navigator.pushNamed(context, 'b');
                     },
                     cardChild: Container(
                       height: 211.0,
                       width: 148.0,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage('images/student.png'),
+                          image: AssetImage('images/Student.png'),
                         ),
                       ),
                       child: Container(
@@ -168,20 +152,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   ReusableCard(
                     colour: Color(0xFFeec9f4),
                     onPressed: () {
-                      Text("Pressed");
+                      Navigator.pushNamed(context, 'y');
                     },
                     cardChild: Container(
                       height: 211.0,
                       width: 148.0,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage('images/student.png'),
+                          image: AssetImage('images/Teacher.png'),
                         ),
                       ),
                       child: Container(
                         padding: const EdgeInsets.only(bottom: 14.0),
                         child: const Text(
-                          "Student",
+                          "Teacher",
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.w400,
@@ -199,20 +183,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   ReusableCard(
                     colour: Color(0xFFeec9f4),
                     onPressed: () {
-                      Text("Pressed");
+                      Navigator.pushNamed(context, 'b');
                     },
                     cardChild: Container(
                       height: 211.0,
                       width: 148.0,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage('images/student.png'),
+                          image: AssetImage('images/princple.png'),
                         ),
                       ),
                       child: Container(
                         padding: const EdgeInsets.only(bottom: 14.0),
                         child: const Text(
-                          "Student",
+                          "Principal",
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.w400,
@@ -233,13 +217,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       width: 148.0,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage('images/student.png'),
+                          image: AssetImage('images/moe.png'),
                         ),
                       ),
                       child: Container(
                         padding: const EdgeInsets.only(bottom: 14.0),
                         child: const Text(
-                          "Student",
+                          "Ministry",
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.w400,
@@ -258,20 +242,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   ReusableCard(
                     colour: Color(0xFFeec9f4),
                     onPressed: () {
-                      Text("Pressed");
+                      Navigator.pushNamed(context, 'z');
                     },
                     cardChild: Container(
                       height: 211.0,
                       width: 148.0,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage('images/student.png'),
+                          image: AssetImage('images/parents.png'),
                         ),
                       ),
                       child: Container(
                         padding: const EdgeInsets.only(bottom: 14.0),
                         child: const Text(
-                          "Student",
+                          "Parent",
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.w400,
